@@ -1,7 +1,7 @@
 
 # tcWebHooksTemplates - A collection of TeamCity WebHook Templates for the tcWebHooks plugin
 
-The [tcWebHooks plugin](https://github.com/tcplugins/tcWebHooks) is a TeamCity plugin which adds outgoing webhook support to TeamCity. One of the features of tcWebHooks is [WebHook Template](https://github.com/tcplugins/tcWebHooks/wiki/WebHook-Templates-:-An-Introduction) support.
+The [tcWebHooks plugin](https://github.com/way2-technology/tcWebHooks) is a TeamCity plugin which adds outgoing webhook support to TeamCity. One of the features of tcWebHooks is [WebHook Template](https://github.com/way2-technology/tcWebHooks/wiki/WebHook-Templates-:-An-Introduction) support.
 
 This GitHub repository is a place to share and discover WebHook Templates. This allows the following benefits:
 
@@ -25,7 +25,7 @@ For more information on editing templates in the TeamCity UI, see the [WebHook-T
 ### Importing a WebHook Template from this repository
 
 This is the process of taking a `webhook-template.json` file, and uploading it into TeamCity.
-This is achieved using the tcWebHook REST API. If the tcWebHook REST API plugin is not installed in TeamCity, you will need to do that first. See the [tcWebHook Installation instructions](https://github.com/tcplugins/tcWebHooks/wiki/Installing).
+This is achieved using the tcWebHook REST API. If the tcWebHook REST API plugin is not installed in TeamCity, you will need to do that first. See the [tcWebHook Installation instructions](https://github.com/way2-technology/tcWebHooks/wiki/Installing).
 
 #### Obtaining the templates
 
@@ -91,14 +91,14 @@ The response will contain the updated template (in XML format unless you request
 
 ### Modifying a template in TeamCity
 
-Once a template is imported, it's possible to make changes to it from within TeamCity to further refine it. For information about editing WebHook Templates, please see the [WebHook-Templates-:-Web-UI](https://github.com/tcplugins/tcWebHooks/wiki/WebHook-Templates-%3A-Web-UI) section on the tcWebHooks wiki.
+Once a template is imported, it's possible to make changes to it from within TeamCity to further refine it. For information about editing WebHook Templates, please see the [WebHook-Templates-:-Web-UI](https://github.com/way2-technology/tcWebHooks/wiki/WebHook-Templates-%3A-Web-UI) section on the tcWebHooks wiki.
 
 It would be great to share any templates with the wider community. See below on how to export a template to share.
 
 ### Exporting a WebHook Template from TeamCity
 
 This is the process of downloading a `webhook-template.json` from TeamCity.
-This is achieved using the tcWebHook REST API. If the tcWebHook REST API plugin is not installed in TeamCity, you will need to do that first. See the [tcWebHook Installation instructions](https://github.com/tcplugins/tcWebHooks/wiki/Installing).
+This is achieved using the tcWebHook REST API. If the tcWebHook REST API plugin is not installed in TeamCity, you will need to do that first. See the [tcWebHook Installation instructions](https://github.com/way2-technology/tcWebHooks/wiki/Installing).
 
 
 #### Exporting a WebHook Template using the export-template.sh script
