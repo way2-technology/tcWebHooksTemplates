@@ -67,7 +67,7 @@ function uploadTemplate {
 	MY_TEMPLATE_FILE=${MY_TEMPLATE_DIR}/${MY_TEMPLATE_ID}/webhook-template.json
 	echo "INFO:   URL: ${MY_SERVER}/app/rest/webhooks/templates/id:${MY_TEMPLATE_ID}"
 	
-	{ EXIT_CODE=$( curl --silent --output /dev/stderr --write-out "%{http_code}" -u ${MY_USERPASS} \
+	{ EXIT_CODE=$( curl -k --silent --output /dev/stderr --write-out "%{http_code}" -u ${MY_USERPASS} \
 	 -X GET \
 	 -H "Accept:application/json" \
 	 -H "Content-type: application/json" \
@@ -77,7 +77,7 @@ function uploadTemplate {
 	if [ $EXIT_CODE -eq 200 ] ; then 
 		# The template exists, so PUT a new copy. 
 		echo "INFO:   Template with that ID already exists in TeamCity. Using PUT to update it."
-		{ EXIT_CODE=$( curl --silent --output /dev/stderr --write-out "%{http_code}" -u ${MY_USERPASS} \
+		{ EXIT_CODE=$( curl -k --silent --output /dev/stderr --write-out "%{http_code}" -u ${MY_USERPASS} \
 		 -X PUT \
 		 -H "Accept:application/json" \
 		 -H "Content-type: application/json" \
@@ -88,7 +88,7 @@ function uploadTemplate {
 		echo "INFO:   Template successfully updated with ID: ${MY_TEMPLATE_ID}"
 	else
 		echo "INFO:   No existing Template with that ID in TeamCity. Using POST to create it."
-		{ EXIT_CODE=$( curl --silent --output /dev/stderr --write-out "%{http_code}" -u ${MY_USERPASS} \
+		{ EXIT_CODE=$( curl -k --silent --output /dev/stderr --write-out "%{http_code}" -u ${MY_USERPASS} \
 		 -X POST \
 		 -H "Accept:application/json" \
 		 -H "Content-type: application/json" \
